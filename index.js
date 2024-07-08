@@ -13,20 +13,7 @@ app.use(express.json());
 
 mongoose.connect(url)
   .then(() => {
-    console.log('DB connected');
+    console.log('DB connectEd');
   })
-  .catch((err) => {
-    console.log(err.message);
-  });
-
-const server = new ApolloServer({ typeDefs, resolvers });
-
-async function startServer() {
-  await server.start();
-  server.applyMiddleware({ app });
-  app.listen(port, () => {
-    console.log(`Server is live on ${port}`);
-  });
-}
-
 startServer();
+cd
